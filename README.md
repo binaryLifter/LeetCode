@@ -2,6 +2,6 @@
 
 Accepted submissions for LeetCode problems
 
-# Profile
+## Profile
 
 https://leetcode.com/ggardusi/
