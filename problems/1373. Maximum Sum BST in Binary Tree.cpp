@@ -28,7 +28,6 @@ public:
         {
             return 0;
         }
-
         return std::max(0, solve(root)->best);
     }
 
@@ -36,22 +35,18 @@ private:
     TreeInfo* solve(const TreeNode* const root)
     {
         TreeInfo* const current = new TreeInfo(root->val);
-
         if (root->left != NULL)
         {
             merge_left(current, solve(root->left));
         }
-
         if (root->right != NULL)
         {
             merge_right(current, solve(root->right));
         }
-
         if (current->valid_bst)
         {
             current->best = std::max(current->best, current->sum);
         }
-
         return current;
     }
 
