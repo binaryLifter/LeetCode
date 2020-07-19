@@ -45,7 +45,7 @@ private:
         return converted;
     }
 
-    std::map<std::string, std::string> strings;
+    std::unordered_map<std::string, std::string> strings;
 };
 
 class ConverterExactly
@@ -80,10 +80,10 @@ public:
     }
 
 private:
-    static std::set<char> vowels;
+    static std::unordered_set<char> vowels;
 };
 
-std::set<char> ConverterConsonant::vowels = {'a', 'e', 'i', 'o', 'u'};
+std::unordered_set<char> ConverterConsonant::vowels = {'a', 'e', 'i', 'o', 'u'};
 
 class Solution
 {
